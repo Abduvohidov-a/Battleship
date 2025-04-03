@@ -98,3 +98,7 @@ class GameGUI: # main class, which game graphical interface manager
         # create field for player
         player_frame = tk.Frame(frame) # create separate container for the player's field
         player_frame.pack(side=tk.LEFT, padx=20) # place the field to the left with an indentation
+
+        # Header above the player's field
+        tk.Label(player_frame, text="Your field", font=("Arial", 12, "bold")).grid(row=0, column=0, columnspan=11)
+
