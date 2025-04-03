@@ -140,6 +140,10 @@ class GameGUI: # main class, which game graphical interface manager
         self.status_label = tk.Label(self.root, text="Your move!", font=("Arial", 14))
         self.status_label.pack()
 
+    def make_move(self, x, y): # method of processing player move(shooting computer field)
+        if self.game_over: # if game finished, ignor pressing
+            return
+
 
 
 
