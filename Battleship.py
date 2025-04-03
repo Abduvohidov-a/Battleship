@@ -70,4 +70,6 @@ class Player: #create class Player which included information about ship size fo
         self.board = Board() # creating field for player
         # creating a list of ships(different size and symbol)
         self.ships = [Ship(5, "A"), Ship(4, "B"), Ship(3, "C"), Ship(3, "D"), Ship(2, "E")]
-
+        for ship in self.ships:
+            ship.generate_coords(self.board) #generate ship coords
+            self.board.place_ship(ship) # placing ship in field
