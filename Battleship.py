@@ -83,3 +83,10 @@ class GameGUI: # main class, which game graphical interface manager
         # creating two player: one for player, one for computer
         self.player = Player("Player") # creating object class Player for player
         self.computer = Player("Computer") # creating object class Player for computer
+
+        self.computer_shots = set() #saving coords of shots computer, for not shoots again
+
+        # Create 2D arrays of buttons to draw the players fields
+        self.buttons_player = [[None] * 10 for _ in range(10)] # player field
+        self.buttons_computer = [[None] * 10 for _ in range(10)] # player computer
+        self.create_boards() # method for creating and drawing game boards
