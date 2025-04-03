@@ -102,3 +102,7 @@ class GameGUI: # main class, which game graphical interface manager
         # Header above the player's field
         tk.Label(player_frame, text="Your field", font=("Arial", 12, "bold")).grid(row=0, column=0, columnspan=11)
 
+        # adding the column number (1-10) on top
+        for x in range(10):
+            tk.Label(player_frame, text=str(x + 1), width=2).grid(row=1, column=x + 1)
+
