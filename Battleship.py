@@ -149,6 +149,13 @@ class GameGUI: # main class, which game graphical interface manager
             self.status_label.config(text="You've already shot here ") # printing warning
             return
 
+        hit = self.computer.board.hit(x, y) # doing hit
+
+        if hit:
+            self.buttons_computer[y][x].config(text="X", bg="red") # marking hit
+            if self.computer.board.all_ships_sunk(): # checking all ship is sunk
+                self.end_game("You win") # finishing game with player win
+
 
 
 
