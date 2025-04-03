@@ -155,6 +155,12 @@ class GameGUI: # main class, which game graphical interface manager
             self.buttons_computer[y][x].config(text="X", bg="red") # marking hit
             if self.computer.board.all_ships_sunk(): # checking all ship is sunk
                 self.end_game("You win") # finishing game with player win
+            else:
+                self.status_label.config(text="Hit! Shot again") # giving for player one more turn
+        else:
+            self.buttons_computer[y][x].config(text=".", bg="blue") # marking lose
+            self.status_label.config(text="Loose! Computer turn") # giving turn to computer
+            self.computer_move()
 
 
 
