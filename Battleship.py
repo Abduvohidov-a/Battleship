@@ -136,7 +136,9 @@ class GameGUI: # main class, which game graphical interface manager
                 btn.grid(row=y + 2, column=x + 1)
                 self.buttons_computer[y][x] = btn  # saving button in array
 
-
+        # adding status line, which says whose move now
+        self.status_label = tk.Label(self.root, text="Your move!", font=("Arial", 14))
+        self.status_label.pack()
 
 
 
