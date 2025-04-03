@@ -131,7 +131,11 @@ class GameGUI: # main class, which game graphical interface manager
         # filling the computer field with button-cells
         for y in range(10): # adding letters from left
             tk.Label(computer_frame, text=chr(65 + y), width=2).grid(row=y + 2, column=0)
-            for x in range(10):
+            for x in range(10): # the computer fields button react when players shot
+                btn = tk.Button(computer_frame, text=" ", width=2, height=1,command=lambda x=x, y=y: self.make_move(x, y))
+                btn.grid(row=y + 2, column=x + 1)
+                self.buttons_computer[y][x] = btn  # saving button in array
+
 
 
 
