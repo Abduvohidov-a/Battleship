@@ -172,7 +172,17 @@ class GameGUI: # main class, which game graphical interface manager
                 self.computer_shots.add((x, y)) # adding coords in the shot list
                 break
 
+        hit = self.player.board.hit(x, y) # doing shoot
 
+        if hit:
+            self.buttons_player[y][x].config(text="X", bg="red") # marking hit
+            if self.player.board.all_ships_sunk(): # checking all ship is sunk
+                self.end_game("Computer win!") # print finishing game with computer win
+            else:
+                self.computer_move()
+        else:
+            self.buttons_player[y][x].config(text=".", bg="blue") # marking lose
+            self.status_label.config(text="Your move!") # giving turn to player
 
 
 
