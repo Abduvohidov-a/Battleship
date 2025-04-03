@@ -93,3 +93,8 @@ class GameGUI: # main class, which game graphical interface manager
 
     def create_boards(self): # The method creates graphic fields of players and places them in the window
         frame = tk.Frame(self.root) # create container for placing both field
+        frame.pack(pady=20) # add indentation at the top
+
+        # create field for player
+        player_frame = tk.Frame(frame) # create separate container for the player's field
+        player_frame.pack(side=tk.LEFT, padx=20) # place the field to the left with an indentation
