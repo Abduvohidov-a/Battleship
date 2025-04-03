@@ -90,3 +90,6 @@ class GameGUI: # main class, which game graphical interface manager
         self.buttons_player = [[None] * 10 for _ in range(10)] # player field
         self.buttons_computer = [[None] * 10 for _ in range(10)] # player computer
         self.create_boards() # method for creating and drawing game boards
+
+    def create_boards(self): # The method creates graphic fields of players and places them in the window
+        frame = tk.Frame(self.root) # create container for placing both field
