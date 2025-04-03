@@ -162,7 +162,15 @@ class GameGUI: # main class, which game graphical interface manager
             self.status_label.config(text="Loose! Computer turn") # giving turn to computer
             self.computer_move()
 
+    def computer_move(self): # method realising computer shoots, work with random
+        if self.game_over:  # if game finished, ignor pressing
+            return
 
+        while True:
+            x, y = random.randint(0, 9), random.randint(0, 9) # generating random coords
+            if (x,y) not in self.computer_shots: # Checking to see if we've fired here before.
+                self.computer_shots.add((x, y)) # adding coords in the shot list
+                break
 
 
 
