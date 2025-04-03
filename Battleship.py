@@ -73,3 +73,6 @@ class Player: #create class Player which included information about ship size fo
         for ship in self.ships:
             ship.generate_coords(self.board) #generate ship coords
             self.board.place_ship(ship) # placing ship in field
+
+class GameGUI: # main class, which game graphical interface manager
+    def __init__(self, root):
