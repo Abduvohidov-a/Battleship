@@ -184,6 +184,17 @@ class GameGUI: # main class, which game graphical interface manager
             self.buttons_player[y][x].config(text=".", bg="blue") # marking lose
             self.status_label.config(text="Your move!") # giving turn to player
 
+    def end_game(self, message): # method for end game
+        self.game_over = True # Set the end-of-game flag to block further moves
+        logging.info(message) # writing message of the game finishing in log
+
+        # creating new window, which print game results
+        end_screen = tk.Toplevel(self.root)
+        end_screen.title("Game finished") # Header for window
+        end_screen.geometry("300x150")
+        tk.Label(end_screen, text=message).pack
+        #  button that closes the main game window when pressed
+        tk.Button(end_screen, text="Close", command=self.root.destroy).pack()
 
 
 
