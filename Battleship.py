@@ -66,3 +66,8 @@ class Ship: #creating Ship class
 
 class Player: #create class Player which included information about ship size for player and computer
     def __init__(self, name):
+        self.name = name # player name
+        self.board = Board() # creating field for player
+        # creating a list of ships(different size and symbol)
+        self.ships = [Ship(5, "A"), Ship(4, "B"), Ship(3, "C"), Ship(3, "D"), Ship(2, "E")]
+
