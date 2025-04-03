@@ -110,5 +110,10 @@ class GameGUI: # main class, which game graphical interface manager
         for y in range(10):
             # adding letters (A-J) left from lines
             tk.Label(player_frame, text=chr(65 + y), width=2).grid(row=y + 2, column=0)
-
+            for x in range(10):
+                # getting cell symbol  (if there is ship, show him, otherwise empty string )
+                btn_text = self.player.board.grid[y][x] if self.player.board.grid[y][x] != " " else " "
+                btn = tk.Button(player_frame, text=btn_text, width=2, height=1)
+                btn.grid(row=y + 2, column=x + 1)  # placing button in the grid
+                self.buttons_player[y][x] = btn  # save button in the array
 
