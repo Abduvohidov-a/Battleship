@@ -120,3 +120,6 @@ class GameGUI: # main class, which game graphical interface manager
         # creating field for computer
         computer_frame = tk.Frame(frame) # create conteiner for computer field
         computer_frame.pack(side=tk.RIGHT, padx=20) # placing the field on the right
+
+        # Header above the computer field
+        tk.Label(computer_frame, text="Computer field", font=("Arial", 12, "bold")).grid(row=0, column=0, columnspan=11)
