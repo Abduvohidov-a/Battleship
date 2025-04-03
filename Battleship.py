@@ -76,3 +76,6 @@ class Player: #create class Player which included information about ship size fo
 
 class GameGUI: # main class, which game graphical interface manager
     def __init__(self, root):
+        self.root = root # saving link for main page tkinker
+        self.root.title("Battleship") # main page subtitle
+        self.game_over = False # flag of the game finishing, initially False
