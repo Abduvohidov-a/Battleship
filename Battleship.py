@@ -196,6 +196,11 @@ class GameGUI: # main class, which game graphical interface manager
         #  button that closes the main game window when pressed
         tk.Button(end_screen, text="Close", command=self.root.destroy).pack()
 
+if __name__ == "__main__":
+    root = tk.Tk()
+    game = GameGUI(root)
+    root.mainloop()
+
 
 
 
