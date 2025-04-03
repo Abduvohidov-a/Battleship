@@ -117,3 +117,6 @@ class GameGUI: # main class, which game graphical interface manager
                 btn.grid(row=y + 2, column=x + 1)  # placing button in the grid
                 self.buttons_player[y][x] = btn  # save button in the array
 
+        # creating field for computer
+        computer_frame = tk.Frame(frame) # create conteiner for computer field
+        computer_frame.pack(side=tk.RIGHT, padx=20) # placing the field on the right
