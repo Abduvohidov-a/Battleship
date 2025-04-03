@@ -79,3 +79,7 @@ class GameGUI: # main class, which game graphical interface manager
         self.root = root # saving link for main page tkinker
         self.root.title("Battleship") # main page subtitle
         self.game_over = False # flag of the game finishing, initially False
+
+        # creating two player: one for player, one for computer
+        self.player = Player("Player") # creating object class Player for player
+        self.computer = Player("Computer") # creating object class Player for computer
