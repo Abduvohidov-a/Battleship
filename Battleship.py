@@ -128,3 +128,16 @@ class GameGUI: # main class, which game graphical interface manager
         for x in range(10):
             tk.Label(computer_frame, text=str(x + 1), width=2).grid(row=1, column=x + 1)
 
+        # filling the computer field with button-cells
+        for y in range(10): # adding letters from left
+            tk.Label(computer_frame, text=chr(65 + y), width=2).grid(row=y + 2, column=0)
+            for x in range(10):
+
+
+
+
+
+
+
+
+
