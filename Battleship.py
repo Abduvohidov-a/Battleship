@@ -144,6 +144,12 @@ class GameGUI: # main class, which game graphical interface manager
         if self.game_over: # if game finished, ignor pressing
             return
 
+        # checking, we are shoots in cell previosly
+        if self.computer.board.grid[y][x] in {"X", "."}:
+            self.status_label.config(text="You've already shot here ") # printing warning
+            return
+
+
 
 
 
