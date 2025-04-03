@@ -63,3 +63,6 @@ class Ship: #creating Ship class
             if all(board.grid[y][x] == " " and self.no_adjacent_ships(x, y, board) for x, y in coords):
                 self.coords = coords  # saving ship coords
                 break
+
+class Player: #create class Player which included information about ship size for player and computer
+    def __init__(self, name):
